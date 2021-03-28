@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script language ="javascript">
+        function addition(){
+            var a = parseInt(document.getElementById("sk1").value);
+            var b = parseInt(document.getElementById("sk2").value);
+            var result = document.getElementById("rez");
+            result.value = a + b;
+        }
+      </script>
+    <meta charset="UTF-8">
+    <title>Formas</title>
+    <link href="css/stils.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<p>
+    <a href="index.html">
+        Uz index.html
+    </a>
+</p>
+    <h1>Formas un ievadlauku piemērs</h1>
+    <form>
+        <p>Šodienas datums <input id="datums"></p>
+        <p>Ja gribi uzzināt šodienas datumu, spied pogu DATUMS 
+            <input onclick="datums.value=new Date();" id="poga" value="DATUMS" type="button">
+        </p>
+        <p>Ja gribi izdzēst datumua lodziņa saturu, spied pogu RESET
+            <input value="RESET" type="reset">
+        </p>
+    </form>
+    <form>
+        <div>1.skaitlis<input type="text" id="sk1"> </div>
+        <div>
+            <input value="X" id="reiz" onclick="rez.value=sk1.value*sk2.value" type="button">
+        </div>
+        <div>
+            <input value="/" id="dalit" onclick="rez.value=sk1.value/sk2.value" type="button">
+        </div>
+        <div>
+            <input value="+" id="skait" onclick="addition()" type="button">
+        </div>
+        <div>
+            <input value="-" id="atnemt" onclick="rez.value=sk1.value-sk2.value" type="button">
+        </div>
+        <div>2.skaitlis<input type="text" id="sk2"> </div>
+        <hr>
+        <div>Rezultāts<input id="rez"> </div>
+    </form>
+</body>
+</html>
